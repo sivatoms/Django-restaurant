@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+    .asteriskField {
+      display: none;
+    }
+</style>
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div class="card text-white bg-dark">
+            <div class="card-body">
+                <h2>
+                    Contact
+                </h2>
+                <form method="post" novalidate>
+                  {% csrf_token %}
+                  {{ form|crispy }}
+                  <button type="submit" class="btn btn-success">Submit</button>
+                  {% if success %}
+                  <p>{{ success }}</p>
+                  {% endif %}
+                </form>
+            </div>  
+          </div>
+      </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+.slider{
+    width: 500px;
+    height: 600px;
+    background: url("/static/images/CBiryani.jpg");
+    margin: 100px auto;
+    animation: slide 20s infinite;
+
+}
+
+@keyframes slide{
+    25%{
+        background: url("/static/images/CBiryani.jpg");
+    }
+    50%{
+        background: url("/static/images/Butterc.jpg");
+    }
+    75%{
+        background: url("/static/images/naan.jpg");
+    }
+    100%{
+        background: url("/static/images/Butterc.jpg");
+    }
+}
+
